@@ -20,4 +20,13 @@ def otosok_szama(jegyek):
         i+=1
     return otos
 
+def egyesek_szama(jegyek):
+    i=0
+    egyes=0
+    while(i<len(jegyek)):
+        if(jegyek[i]==1):
+            egyes+=1
+        i+=1
+    return egyes
+
 

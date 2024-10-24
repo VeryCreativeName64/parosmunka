@@ -1,8 +1,3 @@
-
-#2
-def otosok_szama(jegyek):
-    return jegyek.count(5)
-
 #feladat 1
 def atlag(jegyek):
     total=0
@@ -14,3 +9,15 @@ def atlag(jegyek):
     eredmeny=total/len(jegyek)
     
     return eredmeny
+
+#2
+def otosok_szama(jegyek):
+    i=0
+    otos=0
+    while(i<len(jegyek)):
+        if(jegyek[i]==5):
+            otos+=1
+        i+=1
+    return otos
+
+

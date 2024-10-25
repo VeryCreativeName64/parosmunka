@@ -1,3 +1,4 @@
+
 #feladat 1
 def atlag(jegyek):
     total=0
@@ -58,24 +59,9 @@ def sávdiagram(jegyek):
 
 #6
 def diak_jegyek(jegyek, diak_nevek):
-    """Megjeleníti a diákok jegyeit látványos formában."""
     i = 0
     print("Diákok jegyei:")
     while i < len(jegyek):
         print(f"{i + 1}. diák: {diak_nevek[i]}: {jegyek[i]}")
         i += 1
 
-import random
-def diak_jegyek_generalasa(szam, tobb_5_os=False):
-    """Véletlen diák jegyek generálása."""
-    diakszamok = []
-    i = 0
-
-    while i < szam:
-        if tobb_5_os and random.random() < 0.67:
-            diakszamok.append(5)
-        else:
-            diakszamok.append(random.randint(1, 4))
-        i += 1
-
-    return diakszamok

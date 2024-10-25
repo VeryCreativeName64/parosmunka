@@ -26,5 +26,5 @@ metodus.sávdiagram(jegyek)
 metodus.diak_jegyek(jegyek, diak_nevek)
 
 #7
-diakszamok=metodus.diak_jegyek_generalasa(17,tobb_5_os=False)
-print(f"Diákok véletlen jegyei:{diakszamok}")
+metodus.diak_jegyek_generalasa(17)
+

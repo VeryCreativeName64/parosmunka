@@ -65,17 +65,18 @@ def diak_jegyek(jegyek, diak_nevek):
         print(f"{i + 1}. diák: {diak_nevek[i]}: {jegyek[i]}")
         i += 1
 
+#7
 import random
-def diak_jegyek_generalasa(szam, tobb_5_os=False):
+def diak_jegyek_generalasa(szam):
     """Véletlen diák jegyek generálása."""
     diakszamok = []
     i = 0
-
-    while i < szam:
-        if tobb_5_os and random.random() < 0.67:
+    while(i < szam):
+        generalt_szam=random.randint(1,6)
+        if generalt_szam==6:
             diakszamok.append(5)
         else:
-            diakszamok.append(random.randint(1, 4))
-        i += 1
-
+            diakszamok.append(generalt_szam)
+        i+=1
     return diakszamok
+

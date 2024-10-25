@@ -10,25 +10,31 @@ def atlag(jegyek):
     eredmeny=total/len(jegyek)
     
     return eredmeny
-
+"""
 #2
 def otosok_szama(jegyek):
     i=0
     otos=0
+    egyes=0
     while(i<len(jegyek)):
         if(jegyek[i]==5):
             otos+=1
-        i+=1
-    return otos
-#3
-def egyesek_szama(jegyek):
-    i=0
-    egyes=0
-    while(i<len(jegyek)):
-        if(jegyek[i]==1):
+        elif(jegyek[i]==1):
             egyes+=1
         i+=1
-    return egyes
+    print(f"Egyesek száma:{egyes}")
+    print(f"Ötösök száma:{otos}")
+
+"""
+#2-3
+def osztalyzatok_szama(jegyek,szam):
+    i=0
+    db=0
+    while(i<len(jegyek)):
+        if(jegyek[i]==szam):
+            db+=1
+        i+=1
+    return db
 
 #4
 def elegtelen(jegyek):
@@ -42,13 +48,12 @@ def elegtelen(jegyek):
 
 #5
 def sávdiagram(jegyek):
-    szamok = [0] * 5 
+    szamok = [0,0,0,0,0] 
     i = 0
 
     while i < len(jegyek):
         jegy = jegyek[i]
-        if 1 <= jegy <= 5:
-            szamok[jegy - 1] += 1
+        szamok[jegy - 1] += 1
         i += 1
 
     print("Sávdiagram:")
@@ -64,4 +69,19 @@ def diak_jegyek(jegyek, diak_nevek):
     while i < len(jegyek):
         print(f"{i + 1}. diák: {diak_nevek[i]}: {jegyek[i]}")
         i += 1
+
+#7
+import random
+def diak_jegyek_generalasa(szam):
+    
+    diakszamok = []
+    i = 0
+    while(i < szam):
+        generalt_szam=random.randint(1,6)
+        if generalt_szam==6:
+            diakszamok.append(5)
+        else:
+            diakszamok.append(generalt_szam)
+        i+=1
+    return diakszamok
 
